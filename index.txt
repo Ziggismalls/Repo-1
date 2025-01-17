@@ -1,0 +1,66 @@
+Personnage 1 introduction : 
+Oh oh oh Matelo, je suis Gangplank le roi des pillards déchu.
+Cela fait maintenant 3ans que je suis poursuivi par 
+le Grand général Noxus pour avoir dérobé le (Léviathan " en italique "), 
+et j'aurai besoin de ton aide pour une mission assez délicate.
+Serai-tu prêt à m'aider ? 
+
+  - Réponse 1 : Prendre du temps pour réfléchir 
+  ( Cela quitte la conversation et il faut lui reparler pour lancer la suite des dialogues)
+  - Réponse 2 : Ecouter la suite.
+
+__________________________________________________________________________________________________________________________
+
+Interaction1 Réponse2 : 
+
+Il faut que nous allions vers l'Ouest, un bateau nous attends au port de la ville.
+Nous partons dans 3h, prépare ta valisoche ainsi que ton k-way.
+J'aimerai que tu passes également a la bibliothèque de mestre Emond pour récuperer 
+la carte de l'île de Tougato. Il y a un trésor enfouis depuis des milliers d'années.
+D'après les rumeurs il y aurait a l'intérieur un talisman qui octroie des capacité très spéciale à son porteur.
+
+
+  - Réponse 1 : Lui répondre que vous allez vous mettre en route 
+  - Réponse 2 : Demander plus d'information sur le talisman
+ 
+__________________________________________________________________________________________________________________________
+
+
+Interaction2 Réponse1 : 
+Avant que tu t'en ailles il faut que je te préviennes. Mestre Emond est un homme sage, mais qui n’accorde sa 
+confiance qu’à ceux qu’il juge dignes de la recevoir.
+La bibliothèque de mestre Emond, bien qu’imposante, à un côté mystérieux.
+Ses étagères regorgent de livres anciens et de cartes oubliées,
+certaines même prétendant décrire des endroits que l’on croyait avoir disparu depuis des siècles.
+
+  -Réponse 1 : 
+  -Réponse 2 :
+
+__________________________________________________________________________________________________________________________
+
+
+Interaction2 Réponse2 : Le talisman de l’île de Tougato, également connu sous le nom de "Cœur de l’Éther", 
+est un artefact ancien et puissant, dont les origines remontent à une époque bien avant l’ère des civilisations connues. 
+Selon les légendes transmises par les anciens sages, ce talisman serait une relique d’une civilisation disparue,
+les Aériens, qui régnaient autrefois sur des îles flottantes, invisibles aux yeux des mortels. 
+Leur pouvoir venait de l'harmonie qu'ils avaient avec les énergies naturelles du monde, 
+et le talisman en était le catalyseur.
+
+
+  -Réponse 1 : Lui répondre que vous allez vous mettre en route ( renvoie vers Interaction 2 réponse 1)
+  -Réponse 2 : Dire que vous ne voullez pas risquez votre vie pour si peu et s'en aller ( fin de la conversation)
+
+  __________________________________________________________________________________________________________________________
+
+
+Interaction3 Réponse1 : 
+
+  -Réponse 1 : 
+  -Réponse 2 :
+  __________________________________________________________________________________________________________________________
+
+
+Interaction3 Réponse2 : 
+
+  -Réponse 1 : 
+  -Réponse 2 :
