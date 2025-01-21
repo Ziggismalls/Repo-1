@@ -125,22 +125,26 @@ function displayQuestion(index) {
         if (typedInstance) {
             typedInstance.destroy();
         }
-        
-        questionContainer.innerHTML = '';
-    
+            
         const options = {
             strings: [currentQuestion.question],
             typeSpeed: 20,
             showCursor: false,
         }
     
-        typedInstance = new Typed(questionContainer, options);
+        typedInstance = new Typed('#dialog', options);
+        console.log(typedInstance)
     
         choicesContainer.innerHTML = '';
     
         currentQuestion.choices.forEach((choice) => {
             const button = document.createElement('button');
-            button.textContent = choice.text;
+            button.innerHTML = `
+                <div class="choices-container animate__fadeIn">
+                    <img src="assets/img/msg.png" alt"msg" /> 
+                    <p>${choice.text}</p>
+                </div>
+            `;
             button.addEventListener('click', () => {
                 displayQuestion(choice.nextQuestion);
             });
@@ -161,7 +165,12 @@ function endStory() {
     questionContainer.textContent = storyData[storyData.length - 1].question;
 
     const button = document.createElement('button');
-    button.textContent = "Recommencer";
+    button.innerHTML = `
+                <div class="choices-container animate__fadeIn">
+                    <img src="assets/img/back.png" alt"msg" /> 
+                    <p>Recommencer</p>
+                </div>
+            `;
     button.addEventListener('click', () => {
         window.location.reload();
     });
