@@ -7,13 +7,78 @@ body {
   font-family: Arial, sans-serif;
   margin: 20px;
   overflow: hidden;
-
   background-image: url("assets/img/background.gif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100vh;
 }
+.btnAccueil {
+  background-color: #6ea2d2;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+  font-size: 1.5em;
+  border: none;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+#btnAccueil {
+  animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.homeBg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.characters {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  gap: 100px;
 
+  justify-content: center;
+}
+.firstCharacter,
+.secondCharacter {
+  width: 30vh;
+  height: 30vh;
+}
+.firstCharacter {
+  background-image: url(/assets/img/portrait1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-color: black;
+}
+.secondCharacter {
+  background-image: url(/assets/img/portrait1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-color: black;
+}
 .question-container {
   margin-top: 20px;
   display: flex;

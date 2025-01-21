@@ -81,7 +81,7 @@ const storyData2 = [
   },
 ];
 
-let typedInstance;
+let typedInstance = false;
 
 function displayQuestion(index) {
   console.log(index, storyData2.length);
