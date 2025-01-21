@@ -157,6 +157,8 @@ function endStory() {
     const questionContainer = document.getElementById('question');
     const choicesContainer = document.getElementById('choices');
 
+    document.body.style.backgroundImage = "url('assets/img/end.gif')";
+
     if(typedInstance) {
         typedInstance.destroy();
     }
