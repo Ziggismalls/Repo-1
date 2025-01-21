@@ -1,4 +1,4 @@
-const storyData = [
+const storyData2 = [
   {
     question:
       "Oh oh oh Matelo, je suis Gangplank le roi des pillards déchu. Cela fait maintenant 3 ans que je suis poursuivi par le Grand général Noxus pour avoir dérobé le Léviathan, et j'aurai besoin de ton aide pour un mission assez délicate. Serai-tu prêt à m'aider ?",
@@ -84,14 +84,14 @@ const storyData = [
 let typedInstance;
 
 function displayQuestion(index) {
-  console.log(index, storyData.length);
-  if (index >= storyData.length - 1) {
+  console.log(index, storyData2.length);
+  if (index >= storyData2.length - 1) {
     endStory();
   } else {
     const questionContainer = document.getElementById("question");
     const choicesContainer = document.getElementById("choices");
 
-    const currentQuestion = storyData[index];
+    const currentQuestion = storyData2[index];
 
     if (typedInstance) {
       typedInstance.destroy();
@@ -129,7 +129,7 @@ function endStory() {
   }
 
   choicesContainer.innerHTML = "";
-  questionContainer.textContent = storyData[storyData.length - 1].question;
+  questionContainer.textContent = storyData2[storyData2.length - 1].question;
 
   const button = document.createElement("button");
   button.textContent = "Recommencer";
