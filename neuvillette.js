@@ -117,7 +117,6 @@ function displayQuestion(index) {
     if (index >= storyData.length - 1) {
         endStory();
     } else {
-        const questionContainer = document.getElementById('question');
         const choicesContainer = document.getElementById('choices');
     
         const currentQuestion = storyData[index];
@@ -181,3 +180,13 @@ function endStory() {
 }
 
 displayQuestion(0);
+
+const sound = new Howl({
+    src: ['assets/sounds/1.mp3', 'assets/sounds/2.mp3'],
+    autoplay: true,
+    loop: true,
+    volume: 0.02,
+    onend: function() {
+        console.log('Finished!');
+    }
+});
