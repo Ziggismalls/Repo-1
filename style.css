@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.questChat {
+  position: absolute;
+  width: 800px;
+  height: 500px;
+  background-color: grey;
+}
+
+.divBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  gap: 1px;
+  padding: 10px;
+}
+
+.btnDeux,
+.btnUn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+  padding: 15px;
+  height: 50px;
+  border-radius: 50px;
+}
+.questParag {
+  width: 60%;
+  height: 50%;
+}
