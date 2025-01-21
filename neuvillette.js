@@ -113,47 +113,60 @@ const storyData = [
 let typedInstance;
 
 function displayQuestion(index) {
-    if (index < 0 || index >= storyData.length) {
+    console.log(index, storyData.length)
+    if (index >= storyData.length - 1) {
         endStory();
-        return;
-    }
-
-    const questionContainer = document.getElementById('question');
-    const choicesContainer = document.getElementById('choices');
-
-    const currentQuestion = storyData[index];
-
-    if (typedInstance) {
-        typedInstance.destroy();
-    }
+    } else {
+        const questionContainer = document.getElementById('question');
+        const choicesContainer = document.getElementById('choices');
     
-    questionContainer.innerHTML = '';
-
-    const options = {
-        strings: [currentQuestion.question],
-        typeSpeed: 20
-    }
-
-    typedInstance = new Typed(questionContainer, options);
-
-    choicesContainer.innerHTML = '';
-
-    currentQuestion.choices.forEach((choice) => {
-        const button = document.createElement('button');
-        button.textContent = choice.text;
-        button.addEventListener('click', () => {
-            displayQuestion(choice.nextQuestion);
+        const currentQuestion = storyData[index];
+    
+        if (typedInstance) {
+            typedInstance.destroy();
+        }
+        
+        questionContainer.innerHTML = '';
+    
+        const options = {
+            strings: [currentQuestion.question],
+            typeSpeed: 20,
+            showCursor: false,
+        }
+    
+        typedInstance = new Typed(questionContainer, options);
+    
+        choicesContainer.innerHTML = '';
+    
+        currentQuestion.choices.forEach((choice) => {
+            const button = document.createElement('button');
+            button.textContent = choice.text;
+            button.addEventListener('click', () => {
+                displayQuestion(choice.nextQuestion);
+            });
+            choicesContainer.appendChild(button);
         });
-        choicesContainer.appendChild(button);
-    });
+    }
 }
 
 function endStory() {
     const questionContainer = document.getElementById('question');
     const choicesContainer = document.getElementById('choices');
 
-    questionContainer.textContent = "Fin de l'histoire. Merci d'avoir joué !";
+    if(typedInstance) {
+        typedInstance.destroy();
+    }
+
     choicesContainer.innerHTML = '';
+    questionContainer.textContent = storyData[storyData.length - 1].question;
+
+    const button = document.createElement('button');
+    button.textContent = "Recommencer";
+    button.addEventListener('click', () => {
+        window.location.reload();
+    });
+
+    choicesContainer.append(button);
 }
 
 displayQuestion(0);
