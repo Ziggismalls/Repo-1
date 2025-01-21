@@ -112,6 +112,8 @@ const storyData = [
 
 let typedInstance;
 
+document.querySelector('title').textContent = 'Histoire de Neuvillette';
+
 function displayQuestion(index) {
     console.log(index, storyData.length)
     if (index >= storyData.length - 1) {
