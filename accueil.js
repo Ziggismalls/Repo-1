@@ -38,17 +38,15 @@ firstCharacter.addEventListener("click", () => {
   setTimeout(() => {
     document.body.style.backgroundImage = "url('assets/img/background.gif')";
     document.querySelector("#story-container").style.visibility = "visible";
-    btnAccueil.style.visibility = "hidden";
-    characters.style.visibility = "hidden";
+    homeBg.style.visibility = "hidden";
   }, 2000);
 });
 secondCharacter.addEventListener("click", () => {
   selectionned = "Wriothesley";
   started = true;
   setTimeout(() => {
-    document.body.style.backgroundImage = "url('assets/img/background.gif')";
+    document.body.style.backgroundImage = "url('assets/img/wrio_bgquest.jpeg')";
     document.querySelector("#story-container").style.visibility = "visible";
-    btnAccueil.style.visibility = "hidden";
-    characters.style.visibility = "hidden";
+    homeBg.style.visibility = "hidden";
   }, 2000);
 });

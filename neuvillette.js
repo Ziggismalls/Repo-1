@@ -412,7 +412,7 @@ function endStoryWriothesley() {
 
   choicesContainer.innerHTML = "";
   questionContainer.textContent =
-    storyDataWriothesley[storyDataWriothesleye.length - 1].question;
+    storyDataWriothesley[storyDataWriothesley.length - 1].question;
 
   const button = document.createElement("button");
   button.innerHTML = `
@@ -428,18 +428,20 @@ function endStoryWriothesley() {
   choicesContainer.append(button);
 }
 
-const character = document.getElementById("character");
-
-if (started) {
-  if (selectionned === "Neuvillette") {
+let character = document.getElementById("character");
+switch (selectionned) {
+  case "Neuvillette":
     displayQuestionNeuvillette(0);
     character.innerText = selectionned;
-  } else if (selectionned === "Wriothesley") {
+
+    break;
+
+  case "Wriothesley":
     displayQuestionWriothesley(0);
     character.innerText = selectionned;
-  } else {
-    console.error("Oups, mauvais personnage");
-  }
+    break;
+  default:
+    break;
 }
 
 const sound = new Howl({
