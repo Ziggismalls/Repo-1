@@ -216,7 +216,7 @@ const storyDataWriothesley = [
     choices: [
       {
         text: "Prendre du temps pour réfléchir",
-        nextQuestion: 7,
+        nextQuestion: 6,
       },
       {
         text: "Ecouter la suite.",
@@ -258,7 +258,7 @@ const storyDataWriothesley = [
       },
       {
         text: "Dire que vous ne voulez pas risquez votre vie pour si peu et retourner à vos occupations",
-        nextQuestion: 7,
+        nextQuestion: 6,
       },
     ],
   },
@@ -284,10 +284,6 @@ const storyDataWriothesley = [
   },
   {
     question: "Fin de l'histoire. Merci d'avoir exploré les choix de Gp.",
-    choices: [],
-  },
-  {
-    question: "T'as bien raison, on a pas besoin d'un mec sans C*******",
     choices: [],
   },
 ];
@@ -428,27 +424,11 @@ function endStoryWriothesley() {
   choicesContainer.append(button);
 }
 
-let character = document.getElementById("character");
-switch (selectionned) {
-  case "Neuvillette":
-    displayQuestionNeuvillette(0);
-    character.innerText = selectionned;
-
-    break;
-
-  case "Wriothesley":
-    displayQuestionWriothesley(0);
-    character.innerText = selectionned;
-    break;
-  default:
-    break;
-}
-
 const sound = new Howl({
   src: ["assets/sounds/1.mp3", "assets/sounds/2.mp3"],
   autoplay: true,
   loop: true,
-  volume: 0.02,
+  volume: 0.5,
   onend: function () {
     console.log("Finished!");
   },

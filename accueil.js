@@ -22,9 +22,6 @@ btnAccueil.classList.add("btnAccueil");
 btnAccueil.id = "btnAccueil";
 btnAccueil.innerText = "Jouer";
 
-let selectionned = "";
-let started = false;
-
 btnAccueil.addEventListener("click", () => {
   btnAccueil.style.animation = "fadeOut 2s";
   setTimeout(() => {
@@ -33,20 +30,22 @@ btnAccueil.addEventListener("click", () => {
 });
 
 firstCharacter.addEventListener("click", () => {
-  selectionned = "Neuvillette";
+  character.innerText = "Neuvillette";
   started = true;
   setTimeout(() => {
     document.body.style.backgroundImage = "url('assets/img/background.gif')";
     document.querySelector("#story-container").style.visibility = "visible";
     homeBg.style.visibility = "hidden";
   }, 2000);
+  displayQuestionNeuvillette(0);
 });
 secondCharacter.addEventListener("click", () => {
-  selectionned = "Wriothesley";
+  character.innerText = "Wriothesley";
   started = true;
   setTimeout(() => {
     document.body.style.backgroundImage = "url('assets/img/wrio_bgquest.jpeg')";
     document.querySelector("#story-container").style.visibility = "visible";
     homeBg.style.visibility = "hidden";
   }, 2000);
+  displayQuestionWriothesley(0);
 });
