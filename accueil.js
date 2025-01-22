@@ -25,6 +25,20 @@ btnAccueil.innerText = "Jouer";
 btnAccueil.addEventListener("click", () => {
   btnAccueil.style.animation = "fadeOut 2s";
   setTimeout(() => {
+    btnAccueil.style.visibility = "hidden";
+  }, 2000);
+});
+
+firstCharacter.addEventListener("click", () => {
+  setTimeout(() => {
+    document.body.style.backgroundImage = "url('assets/img/background.gif')";
+    document.querySelector("#story-container").style.visibility = "visible";
+    btnAccueil.style.visibility = "hidden";
+    characters.style.visibility = "hidden";
+  }, 2000);
+});
+firstCharacter.addEventListener("click", () => {
+  setTimeout(() => {
     document.body.style.backgroundImage = "url('assets/img/background.gif')";
     document.querySelector("#story-container").style.visibility = "visible";
     btnAccueil.style.visibility = "hidden";
