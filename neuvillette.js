@@ -428,7 +428,19 @@ function endStoryWriothesley() {
   choicesContainer.append(button);
 }
 
-displayQuestionWriothesley(0);
+const character = document.getElementById("character");
+
+if (started) {
+  if (selectionned === "Neuvillette") {
+    displayQuestionNeuvillette(0);
+    character.innerText = selectionned;
+  } else if (selectionned === "Wriothesley") {
+    displayQuestionWriothesley(0);
+    character.innerText = selectionned;
+  } else {
+    console.error("Oups, mauvais personnage");
+  }
+}
 
 const sound = new Howl({
   src: ["assets/sounds/1.mp3", "assets/sounds/2.mp3"],

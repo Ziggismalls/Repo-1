@@ -22,6 +22,9 @@ btnAccueil.classList.add("btnAccueil");
 btnAccueil.id = "btnAccueil";
 btnAccueil.innerText = "Jouer";
 
+let selectionned = "";
+let started = false;
+
 btnAccueil.addEventListener("click", () => {
   btnAccueil.style.animation = "fadeOut 2s";
   setTimeout(() => {
@@ -30,6 +33,8 @@ btnAccueil.addEventListener("click", () => {
 });
 
 firstCharacter.addEventListener("click", () => {
+  selectionned = "Neuvillette";
+  started = true;
   setTimeout(() => {
     document.body.style.backgroundImage = "url('assets/img/background.gif')";
     document.querySelector("#story-container").style.visibility = "visible";
@@ -37,7 +42,9 @@ firstCharacter.addEventListener("click", () => {
     characters.style.visibility = "hidden";
   }, 2000);
 });
-firstCharacter.addEventListener("click", () => {
+secondCharacter.addEventListener("click", () => {
+  selectionned = "Wriothesley";
+  started = true;
   setTimeout(() => {
     document.body.style.backgroundImage = "url('assets/img/background.gif')";
     document.querySelector("#story-container").style.visibility = "visible";
