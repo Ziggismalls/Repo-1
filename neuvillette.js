@@ -1,4 +1,4 @@
-const storyData = [
+const storyDataNeuvillette = [
     {
         question: "Neuvillette doit juger un cas où un citoyen accuse une Mélusine de vol. Comment réagit-il ?",
         choices: [
@@ -112,14 +112,14 @@ const storyData = [
 
 let typedInstance;
 
-function displayQuestion(index) {
-    console.log(index, storyData.length)
-    if (index >= storyData.length - 1) {
-        endStory();
+function displayQuestionNeuvillette(index) {
+    console.log(index, storyDataNeuvillette.length)
+    if (index >= storyDataNeuvillette.length - 1) {
+        endStoryNeuvillette();
     } else {
         const choicesContainer = document.getElementById('choices');
     
-        const currentQuestion = storyData[index];
+        const currentQuestion = storyDataNeuvillette[index];
     
         if (typedInstance) {
             typedInstance.destroy();
@@ -145,14 +145,14 @@ function displayQuestion(index) {
                 </div>
             `;
             button.addEventListener('click', () => {
-                displayQuestion(choice.nextQuestion);
+                displayQuestionNeuvillette(choice.nextQuestion);
             });
             choicesContainer.appendChild(button);
         });
     }
 }
 
-function endStory() {
+function endStoryNeuvillette() {
     const questionContainer = document.getElementById('question');
     const choicesContainer = document.getElementById('choices');
 
@@ -163,7 +163,7 @@ function endStory() {
     }
 
     choicesContainer.innerHTML = '';
-    questionContainer.textContent = storyData[storyData.length - 1].question;
+    questionContainer.textContent = storyDataNeuvillette[storyDataNeuvillette.length - 1].question;
 
     const button = document.createElement('button');
     button.innerHTML = `
@@ -179,7 +179,7 @@ function endStory() {
     choicesContainer.append(button);
 }
 
-displayQuestion(0);
+displayQuestionNeuvillette(0);
 
 const sound = new Howl({
     src: ['assets/sounds/1.mp3', 'assets/sounds/2.mp3'],
