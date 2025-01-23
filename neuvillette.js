@@ -209,7 +209,7 @@ const storyDataNeuvillette = [
     choices: [],
   },
 ];
-const storyDataWriothesley = [
+const storyDataRaiden = [
   {
     question:
       "Oh oh oh Matelo, je suis Gangplank le roi des pillards déchu. Cela fait maintenant 3 ans que je suis poursuivi par le Grand général Noxus pour avoir dérobé le Léviathan, et j'aurai besoin de ton aide pour un mission assez délicate. Serai-tu prêt à m'aider ?",
@@ -283,7 +283,8 @@ const storyDataWriothesley = [
     ],
   },
   {
-    question: "Fin de l'histoire. Merci d'avoir exploré les choix de Gp.",
+    question:
+      "Fin de l'histoire. Merci d'avoir exploré les choix de Raiden Shogun.",
     choices: [],
   },
 ];
@@ -329,14 +330,14 @@ function displayQuestionNeuvillette(index) {
     });
   }
 }
-function displayQuestionWriothesley(index) {
-  console.log(index, storyDataWriothesley.length);
-  if (index >= storyDataWriothesley.length - 1) {
-    endStoryWriothesley();
+function displayQuestionRaiden(index) {
+  console.log(index, storyDataRaiden.length);
+  if (index >= storyDataRaiden.length - 1) {
+    endStoryRaiden();
   } else {
     const choicesContainer = document.getElementById("choices");
 
-    const currentQuestion = storyDataWriothesley[index];
+    const currentQuestion = storyDataRaiden[index];
 
     if (typedInstance) {
       typedInstance.destroy();
@@ -362,7 +363,7 @@ function displayQuestionWriothesley(index) {
                   </div>
               `;
       button.addEventListener("click", () => {
-        displayQuestionWriothesley(choice.nextQuestion);
+        displayQuestionRaiden(choice.nextQuestion);
       });
       choicesContainer.appendChild(button);
     });
@@ -396,11 +397,11 @@ function endStoryNeuvillette() {
 
   choicesContainer.append(button);
 }
-function endStoryWriothesley() {
+function endStoryRaiden() {
   const questionContainer = document.getElementById("question");
   const choicesContainer = document.getElementById("choices");
 
-  document.body.style.backgroundImage = "url('assets/img/end_wrio2.gif')";
+  document.body.style.backgroundImage = "url('assets/img/raidenUlti.gif')";
 
   if (typedInstance) {
     typedInstance.destroy();
@@ -408,7 +409,7 @@ function endStoryWriothesley() {
 
   choicesContainer.innerHTML = "";
   questionContainer.textContent =
-    storyDataWriothesley[storyDataWriothesley.length - 1].question;
+    storyDataRaiden[storyDataRaiden.length - 1].question;
 
   const button = document.createElement("button");
   button.innerHTML = `

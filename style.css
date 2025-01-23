@@ -5,15 +5,32 @@
 
 body {
   font-family: Arial, sans-serif;
-  margin: 20px;
+  background-image: url("assets/img/backgroundgenshin.jpg");
+  background-color: #171333;
   overflow: hidden;
-  background-image: url("assets/img/background.gif");
+  margin: 20px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
 }
+.h1 {
+  width: 100%;
+}
+
+.h1Txt {
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 255, 255, 0.68);
+  font-size: 5em;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 1rem;
+  font-style: italic;
+}
 .btnAccueil {
+  position: absolute;
+  left: 47%;
+  top: 65vh;
   background-color: #6ea2d2;
   color: white;
   padding: 1rem 2rem;
@@ -21,7 +38,6 @@ body {
   font-size: 1.5em;
   border: none;
   cursor: pointer;
-  margin-top: 2rem;
 }
 #btnAccueil {
   animation: fadeIn 2s;
@@ -45,7 +61,7 @@ body {
 .homeBg {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   height: 100vh;
@@ -55,28 +71,35 @@ body {
   height: fit-content;
   display: flex;
   gap: 100px;
-
-  justify-content: center;
+  justify-content: space-around;
 }
 .firstCharacter,
 .secondCharacter {
-  width: 30vh;
-  height: 30vh;
-  background-color: #6ea2d2;
+  width: 400px;
+  height: 60vh;
+  background-color: transparent;
+}
+.firstCharacter:hover,
+.secondCharacter:hover {
+  transition: 1s ease;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 .firstCharacter {
-  background-image: url(/assets/img/portrait1.png);
-  background-size: cover;
+  background-image: url(/assets/img/portrait1.webp);
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  cursor: pointer;
+  transition: 1s ease-out;
+  transform: scale(1);
 }
 .secondCharacter {
-  background-image: url(/assets/img/wriothesley.webp);
-  background-size: cover;
+  background-image: url(/assets/img/portrait2.png);
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  cursor: pointer;
+  transition: 1s ease-out;
+  transform: scale(1);
 }
 .question-container {
   margin-top: 20px;
