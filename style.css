@@ -30,8 +30,8 @@ body {
 .btnAccueil {
   position: absolute;
   left: 47%;
-  top: 65vh;
-  background-color: #6ea2d2;
+  top: 70vh;
+  background-color: #6ea2d2b7;
   color: white;
   padding: 1rem 2rem;
   border-radius: 5rem;
