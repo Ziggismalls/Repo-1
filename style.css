@@ -200,7 +200,7 @@ body {
   color: white;
   position: absolute;
   top: 650px;
-  border-bottom: 10px solid white;
+  border-bottom: 3px solid white;
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
   padding-bottom: 0.5rem;

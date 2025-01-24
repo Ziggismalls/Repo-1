@@ -481,7 +481,7 @@ function displayQuestionNeuvillette(index) {
 
     const options = {
       strings: [currentQuestion.question],
-      typeSpeed: 20,
+      typeSpeed: 2,
       showCursor: false,
     };
 
@@ -520,7 +520,7 @@ function displayQuestionRaiden(index) {
 
     const options = {
       strings: [currentQuestion.question],
-      typeSpeed: 20,
+      typeSpeed: 2,
       showCursor: false,
     };
 
